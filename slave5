@@ -1,0 +1,9 @@
+#deploy static application using (httpd or nginx)
+sudo apt update -y
+sudo apt install -y apache2
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo apt install git -y
+sudo git clone https://github.com/bhargavibairagoni/spering.git
+sudo mv spering/spering-html/* /var/www/html/
+sudo systemctl restart apache2
